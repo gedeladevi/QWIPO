@@ -1,0 +1,251 @@
+/*
+In NativeScript, the app.css file is where you place CSS rules that
+you would like to apply to your entire application. Check out
+http://docs.nativescript.org/ui/styling for a full list of the CSS
+selectors and properties you can use to style UI components.
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. You can learn more about the
+NativeScript core theme at https://github.com/nativescript/theme
+The imported CSS rules must precede all other types of rules.
+*/
+@import '@nativescript/theme/css/core.css';
+@import '@nativescript/theme/css/default.css';
+
+/* Place any CSS rules you want to apply on both iOS and Android here.
+This is where the vast majority of your CSS code goes. */
+
+/*
+The following CSS rule changes the font size of all Buttons that have the
+"-primary" class modifier.
+*/
+.far {
+    font-family: Font Awesome 5 Free, fa-regular-400;
+    font-weight: 400;
+}
+
+.fab {
+    font-family: Font Awesome 5 Brands, fa-brands-400;
+    font-weight: 400;
+}
+
+.fas {
+    font-family: Font Awesome 5 Free, fa-solid-900;
+    font-weight: 900;
+}
+
+
+Button.-primary {
+  font-size: 18;
+}
+
+
+.text-center{
+text-align: center;
+}
+
+.fabold{
+  font-family: "Euclid Circular A", "EUCLIDCIRCULARA-BOLD";
+   }
+  
+   .fabolditalic{
+       font-family: "Euclid Circular A","EUCLIDCIRCULARA-BOLDITALIC";
+   }
+  
+   .faitalic{
+       font-family: "Euclid Circular A", "EUCLIDCIRCULARA-ITALIC";
+     
+   }
+  
+   .falight{
+       font-family: "Euclid Circular A Light","EUCLIDCIRCULARA-LIGHT";
+      
+   }
+  
+   .falightitalic{
+       font-family: "Euclid Circular A Light","EUCLIDCIRCULARA-LIGHTITALIC";
+   }
+  
+   .famedium{
+       font-family: "Euclid Circular A Medium","EUCLIDCIRCULARA-MEDIUM";
+   }
+  
+   .famediumitalic{
+       font-family: "Euclid Circular A Medium" ,"EUCLIDCIRCULARA-MEDIUMITALIC";
+   }
+  
+   .faregular{
+       font-family: "Euclid Circular A","EUCLIDCIRCULARA-REGULAR";
+   }
+  
+   .fasemibold{
+       font-family: "Euclid Circular A SemiBold","EUCLIDCIRCULARA-SEMIBOLD";
+   }
+  
+   .fasemibolditalic{
+       font-family: "Euclid Circular A SemiBold","EUCLIDCIRCULARA-SEMIBOLDITALIC";
+   }
+  
+   .coverImage{
+    height: 50%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}  
+
+.ft50{
+  font-size: 50px;
+  color: white;
+}
+.ft40{
+    font-size: 40px;
+    color: white;
+  }
+.ft10{
+    font-size: 10px; 
+}
+
+.grid-border{
+    border:2px solid red;
+}
+.text-black{
+    color: black;
+} 
+.text-grey{
+    color: #A4A3A7;
+}
+.text-violet{
+    color: #9C3DFD;
+}
+.ft-30{
+    font-size: 30px;
+}
+.ft-14{
+    font-size: 14px;
+}
+.ft-15{
+    font-size: 15px;
+}
+.ft-20{
+    font-size: 17px;
+}
+.ft-21{
+    font-size: 21px;
+}
+.ft-25{
+    font-size: 25px;
+}
+.ft-35{
+    font-size: 35px;
+}
+
+.qwipo_color{
+    color :#9C3BFE;
+}
+.color-white{
+    background-color: #FFFFFF;
+}
+.qwipo{  
+    height: 57;
+    text-align: center;
+    margin-top: 60px;
+}
+.qwipo1{  
+    height: 57;
+    text-align: center;
+    /* margin-top: 100px; */   
+}
+.qwipo2{
+    text-align: center;
+    vertical-align: center;  
+}
+.text-white{
+    color: white;
+}
+
+.login-bg{
+    background-color: #F8F8F8;
+    }
+   .bg-green{
+background-color: chartreuse;
+    }
+
+.txtunderline{
+        text-decoration:underline;
+        
+     }
+
+.br-radius-10{
+    border-radius: 10px;
+     }  
+
+.br-radius-15{
+    border-radius: 15px;
+             }
+
+.br-radius-25{
+     border-radius: 25px;
+            }
+
+.br-radius-30{
+    border-radius: 30px;
+            }
+
+            TextField,TextField:focus {                         
+                        background-color: rgba(255, 0, 0, 0.0);
+                        border-color:rgba(255, 0, 0, 0.0);
+                        border-width: 1;
+                      }
+
+                      .btnlogin1{
+                        margin-bottom: 70%; 
+                        border-radius:30px; 
+                        background-color: #5EC401;
+                        color: #FFFFFF;
+                    }    
+                    .lbllogin{ 
+                        background-color: #5EC401;
+                        color: #FFFFFF;
+                        border-radius: 30px,30px,0,0;
+                        border-color: #5EC401;
+                        border-width: 5px;
+                    }      
+                    .lbllogin1{ 
+                        background-color:#FFFFFF;  
+                        border-radius: 0,0,30px,30px;
+                        border-color: #5EC401;
+                        border-width: 5px;
+                    }   
+                    .lbllogin2{ 
+                          
+                        border-radius: 25px;
+                        border-color: #FFFFFF;
+                        border-width: 4px;
+                    }   
+                    .lbllocatin{ 
+                          
+                        border-radius: 25px;
+                        border-width: 4px;
+                        background-color: blueviolet;
+                        height: 150px;
+                        width: 150px;
+                        /* vertical-align: middle; */
+                        /* line-height: 50; */
+                    }   
+
+                    .plchdr-gray{
+                        placeholder-color:#8c8c8c;
+                    }
+                    #txt_email_addr,#txt_password{
+                        placeholder-color:#8c8c8c;  
+                       height:50;
+                       width: 300;
+                      
+                   }
+                   #txt_email_addr1{
+                        placeholder-color:#8c8c8c;  
+                       height:50;
+                       width: 300;     
+                     
+                   }

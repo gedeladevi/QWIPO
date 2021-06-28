@@ -1,0 +1,43 @@
+<ScrollView height="100%" iosOverflowSafeAreaEnabled="true">
+    <StackLayout orientation="vertical" class="login-bg">
+      <GridLayout rows="*" columns="*">
+        <image src="res://shortbg" stretch="aspectFit" col="0" row="0"></image>
+        <label text="QWIPO" class="qwipo2 fabold ft40 text-white" col="0" row="0"></label>
+      </GridLayout>
+        <StackLayout class="text-center" margin="30,0,0,0">
+          <image src="res://otp" stretch="aspectFit" height="200" width="200"></image>
+        </StackLayout>
+        <Label text="Enter OTP Code" class="fasemibold text-black ft-30 text-center" textWrap="true" padding="25,0,0,10"></Label>
+    <Label text="We have sent you access code Via SMS for  &#xa; Mobile Number Verification" class="text-grey ft-15 famedium text-center" style="line-height:8px;" textWrap="true" padding="10,0,10,10">
+    </Label>
+
+  
+     
+  <GridLayout rows="*" columns="*,*,*,*,*" class="otp-text-grid" padding="15,15,15,15">
+     
+      <TextField   hint="*"  row="0" col="0" class="text-grey ft-30 famedium text-center br-radius-25 txt-otp color-white" maxLength="1" keyboardType="integer"></TextField> 
+      <TextField   hint="*" row="0" col="1" class="text-grey ft-30 famedium text-center br-radius-25 txt-otp color-white" maxLength="1" keyboardType="integer"></TextField> 
+      <TextField   hint="*" row="0" col="2" class="text-grey ft-30 famedium text-center br-radius-25 txt-otp color-white" maxLength="1" keyboardType="integer"></TextField> 
+      <TextField   hint="" row="0" col="3" class="text-grey ft-30 famedium text-center br-radius-25 txt-otp color-white" maxLength="1" keyboardType="integer"></TextField> 
+      <TextField   hint="" row="0" col="4" class="text-grey ft-30 famedium text-center br-radius-25 txt-otp color-white" maxLength="1" keyboardType="integer"></TextField> 
+    
+    
+  </GridLayout>
+   
+  <StackLayout height="70" padding="0,15,0,15" margin="10,0,10,0">
+    <Button text="Verify" (tap)="GoToaccountactivation()" class="ft-21 famedium btnlogin1"></Button> 
+ </StackLayout>
+
+ <StackLayout orientation="horizontal" class="text-center" width="100%" height="50" 
+    verticalAlignment="bottom" style="padding-left: 80;" margin="10,0,10,0">
+     <Label>
+       <FormattedString>
+         <Span text="I Did't Receive Code!" class="text-black ft-15 famedium"></Span>
+         <Span text=" Resend Code"  class="text-violet txtunderline ft-15 fabold" ></Span>
+       </FormattedString>
+     </Label>
+ </StackLayout>
+
+
+    </StackLayout>
+</ScrollView>

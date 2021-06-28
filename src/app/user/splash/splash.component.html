@@ -1,0 +1,24 @@
+  
+<GridLayout  rows="*" columns="*" class="coverImage" left="0" top="0" height="100%">
+   <image src="res://splash"  stretch="aspectFill" col="0" row="0"  ></image>
+   <image src="res://qwipo" class="qwipo" stretch="aspectFit" col="0" row="0" verticalAlignment="top"></image>
+
+ <StackLayout row="0" col="0"  verticalAlignment="bottom"  horizontalAlignment="left" height="250" width="100%" padding="15">
+     
+    <Button text="Login" (tap)="GoToLogin()"  class="text-violet ft-20 fabold" id="btnlogin" backgroundColor="white"></Button>
+     
+ </StackLayout>
+</GridLayout>
+
+ 
+
+<StackLayout orientation="horizontal" class="text-center" width="100%" height="50" 
+    verticalAlignment="bottom" style="padding-left: 80;" margin="10,0,10,0">
+     <Label (tap)="GoToregistration()">
+       <FormattedString>
+         <Span text="New to QWIPO? " class="text-white ft-20 famedium"></Span>
+         <Span text=" Create Account" class="text-white txtunderline ft-20 fabold"></Span>
+       </FormattedString>
+     </Label>
+ </StackLayout>
+
