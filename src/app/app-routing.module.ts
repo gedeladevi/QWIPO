@@ -6,7 +6,12 @@ const routes: Routes = [
   {
     path: 'user',
     loadChildren: () => import('~/app/user/user.module').then((m) => m.UserModule),
-  }
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('~/app/home/home.module').then((m) => m.HomeModule),
+  },
+ 
 ]
 @NgModule({
   imports: [NativeScriptRouterModule.forRoot(routes)],

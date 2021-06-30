@@ -1,33 +1,33 @@
  
 <ScrollView height="100%" iosOverflowSafeAreaEnabled="false">
-<StackLayout orientation="vertical" class="login-bg">
+<StackLayout orientation="vertical" class="bg-gray">
     <GridLayout rows="*" columns="*" height="40%" verticalAlignment="top">
       <image src="res://logincopy" stretch="aspectFill" col="0" row="0"></image>
-      <label text="QWIPO" class="qwipo fabold ft50 " col="0" row="0"></label>
+      <label text="QWIPO" class="qwipo fabold ft-50 " col="0" row="0"></label>
     </GridLayout>
     
     <Label text="Login to Qwipo" class="fasemibold text-black ft-30" textWrap="true" padding="25,0,0,10"></Label>
-    <Label text="Enter Email and Password to continue" class="text-grey ft-20 famedium" textWrap="true" padding="10,0,10,10"></Label>
-    <GridLayout rows="*" columns="25,300,*" id="grid_text" class="color-white" style="padding: 0,15,0,15;"   margin="10,0,10,0">
-      <Label row="0" col="0" class="fas qwipo_color ft-20"  text="&#xf0e0;" verticalAlignment="center"></Label>
-      <TextField row="0" col="1" class=" text-grey ft-20 famedium" id="txt_email_addr" hint="Email Address" ></TextField>  
+    <Label text="Enter Email and Password to continue" class="text-grey ft-17 famedium" textWrap="true" padding="10,0,10,10"></Label>
+    <GridLayout rows="*" columns="25,300,*" id="grid_text" class="bg-white" style="padding: 0,15,0,15;"   margin="10,0,10,0">
+      <Label row="0" col="0" class="fas text-violet ft-17"  text="&#xf0e0;" verticalAlignment="center"></Label>
+      <TextField row="0" col="1" class=" text-grey ft-17 famedium" id="txt_email_addr" hint="Email Address" ></TextField>  
     </GridLayout>
 
-    <GridLayout rows="*" columns="25,300,*" id="grid_text" style="padding: 0,15,0,15;" class="color-white"  margin="10,0,10,0">
-      <Label row="0" col="0" class="fas qwipo_color ft-20"  text="&#xf023;" verticalAlignment="center" ></Label>
+    <GridLayout rows="*" columns="25,300,*" id="grid_text" style="padding: 0,15,0,15;" class="bg-white"  margin="10,0,10,0">
+      <Label row="0" col="0" class="fas text-violet ft-17"  text="&#xf023;" verticalAlignment="center" ></Label>
       <TextField row="0" col="1" hint="Password" id="txt_password"  secure="true"
-      returnKeyType="done" class="text-grey ft-20 famedium"></TextField> 
-      <Label row="0" col="2" class="fas text-grey ft-20" verticalAlignment="center" text="&#xf06e;" *ngIf="!ispasswordshow" (tap)="passwordshow()"></Label> 
-      <Label row="0" col="2" class="fas text-grey ft-20" verticalAlignment="center" text="&#xf070;" *ngIf="ispasswordshow" (tap)="passwordhide()"></Label>  
+      returnKeyType="done" class="text-grey ft-17 famedium"></TextField> 
+      <Label row="0" col="2" class="fas text-grey ft-17" verticalAlignment="center" text="&#xf06e;" *ngIf="!ispasswordshow" (tap)="passwordshow()"></Label> 
+      <Label row="0" col="2" class="fas text-grey ft-17" verticalAlignment="center" text="&#xf070;" *ngIf="ispasswordshow" (tap)="passwordhide()"></Label>  
     </GridLayout>
 
 
-    <Label text="Forgot Password?" class="famedium text-black ft-20" horizontalAlignment="right"  textWrap="true" padding="15,15,0,0"></Label>
+    <Label text="Forgot Password?" class="famedium text-black ft-17" horizontalAlignment="right"  textWrap="true" padding="15,15,0,0"></Label>
     <StackLayout height="70" padding="0,15,0,15" margin="15,0,10,0">
-      <Button text="Login"  class="ft-21 fabold btnlogin1" ></Button> 
+      <Button text="Login"  class="ft-21 fabold btnlogin1" (tap)="GoTohomepage()"></Button> 
    </StackLayout>
   
-    <Label text="or Login with" class="famedium text-grey ft-20"  horizontalAlignment="center" textWrap="true"  margin="0,0,10,0"></Label> 
+    <Label text="or Login with" class="famedium text-grey ft-17"  horizontalAlignment="center" textWrap="true"  margin="0,0,10,0"></Label> 
   
     <StackLayout orientation="horizontal" horizontalAlignment="center" margin="10,0,10,0">
       <Button class="ft-21 famedium" id="facebook"  >

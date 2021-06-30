@@ -23,4 +23,7 @@ this.ispasswordshow=false;
     GoToregistration():void{
 this.route.navigate(["user/registration"]);
     }
+    GoTohomepage():void{
+        this.route.navigate(["home/home"]);
+    }
 }

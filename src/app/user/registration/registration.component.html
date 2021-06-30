@@ -1,40 +1,40 @@
  
 <ScrollView height="100%" iosOverflowSafeAreaEnabled="true">
 
-<StackLayout orientation="vertical" class="login-bg">
+<StackLayout orientation="vertical" class="bg-gray">
     <GridLayout rows="*" columns="*">
       <image src="res://shortbg" stretch="aspectFit" col="0" row="0"></image>
-      <label text="QWIPO" class="qwipo2 fabold ft40 text-white" col="0" row="0"></label>
+      <label text="QWIPO" class="qwipo2 fabold ft-40 text-white" col="0" row="0"></label>
     </GridLayout>
     
     <Label text="Create New Account" class="fasemibold text-black ft-30" textWrap="true" padding="25,0,0,10"></Label>
-    <Label text="Please create New Account to start using Qwipo" class="text-grey ft-20 famedium " textWrap="true" padding="10,0,10,10"></Label>
+    <Label text="Please create New Account to start using Qwipo" class="text-grey ft-17 famedium " textWrap="true" padding="10,0,10,10"></Label>
     
-    <GridLayout rows="*" columns="25,300,*" id="grid_text" class="color-white" style="padding: 0,15,0,15;"   margin="10,0,10,0">
-      <Label row="0" col="0" class="fas qwipo_color ft-20"  text="&#xf007;" verticalAlignment="center"></Label>
-      <TextField row="0" col="1" class=" text-grey ft-20 famedium" id="txt_email_addr" hint=" Name" ></TextField>  
+    <GridLayout rows="*" columns="25,300,*" id="grid_text" class="bg-white" style="padding: 0,15,0,15;"   margin="10,0,10,0">
+      <Label row="0" col="0" class="fas text-violet ft-17"  text="&#xf007;" verticalAlignment="center"></Label>
+      <TextField row="0" col="1" class=" text-grey ft-17 famedium" id="txt_email_addr" hint=" Name" ></TextField>  
     </GridLayout>
 
-    <GridLayout rows="*" columns="25,300,*" id="grid_text" class="color-white" style="padding: 0,15,0,15;"   margin="10,0,10,0">
-      <Label row="0" col="0" class="fas qwipo_color ft-20"  text="&#xf0b1;" verticalAlignment="center"></Label>
-      <TextField row="0" col="1" class=" text-grey ft-20 famedium" id="txt_email_addr" hint=" Enter Business Name" ></TextField>  
+    <GridLayout rows="*" columns="25,300,*" id="grid_text" class="bg-white" style="padding: 0,15,0,15;"   margin="10,0,10,0">
+      <Label row="0" col="0" class="fas text-violet ft-17"  text="&#xf0b1;" verticalAlignment="center"></Label>
+      <TextField row="0" col="1" class=" text-grey ft-17 famedium" id="txt_email_addr" hint=" Enter Business Name" ></TextField>  
     </GridLayout>
 
-    <GridLayout rows="*" columns="25,300,*" id="grid_text" class="color-white" style="padding: 0,15,0,15;"   margin="10,0,10,0">
-      <Label row="0" col="0" class="fas qwipo_color ft-20"  text="&#xf0e0;" verticalAlignment="center"></Label>
-      <TextField row="0" col="1" class=" text-grey ft-20 famedium" id="txt_email_addr" hint=" Email Address" ></TextField>  
+    <GridLayout rows="*" columns="25,300,*" id="grid_text" class="bg-white" style="padding: 0,15,0,15;"   margin="10,0,10,0">
+      <Label row="0" col="0" class="fas text-violet ft-17"  text="&#xf0e0;" verticalAlignment="center"></Label>
+      <TextField row="0" col="1" class=" text-grey ft-17 famedium" id="txt_email_addr" hint=" Email Address" ></TextField>  
     </GridLayout>
 
-    <GridLayout rows="*" columns="25,300,*" id="grid_text" style="padding: 0,15,0,15;" class="color-white"  margin="10,0,10,0">
-      <Label row="0" col="0" class="fas qwipo_color ft-20"  text="&#xf023;" verticalAlignment="center" ></Label>
+    <GridLayout rows="*" columns="25,300,*" id="grid_text" style="padding: 0,15,0,15;" class="bg-white"  margin="10,0,10,0">
+      <Label row="0" col="0" class="fas text-violet ft-17"  text="&#xf023;" verticalAlignment="center" ></Label>
       <TextField row="0" col="1" hint=" Password" id="txt_password"  secure="true"
-      returnKeyType="done" class="text-grey ft-20 famedium"></TextField> 
-      <Label row="0" col="2" class="fas text-grey ft-20" verticalAlignment="center" text="&#xf06e;" *ngIf="!ispasswordshow" (tap)="passwordshow()"></Label> 
-      <Label row="0" col="2" class="fas text-grey ft-20" verticalAlignment="center" text="&#xf070;" *ngIf="ispasswordshow" (tap)="passwordhide()"></Label>  
+      returnKeyType="done" class="text-grey ft-17 famedium"></TextField> 
+      <Label row="0" col="2" class="fas text-grey ft-17" verticalAlignment="center" text="&#xf06e;" *ngIf="!ispasswordshow" (tap)="passwordshow()"></Label> 
+      <Label row="0" col="2" class="fas text-grey ft-17" verticalAlignment="center" text="&#xf070;" *ngIf="ispasswordshow" (tap)="passwordhide()"></Label>  
     </GridLayout>
-    <GridLayout rows="*" columns="25,300,*" id="grid_text" class="color-white" style="padding: 0,15,0,15;"   margin="10,0,10,0">
-      <Label row="0" col="0" class="fas qwipo_color ft-20"  text="&#xf3cd;" verticalAlignment="center"></Label>
-      <TextField row="0" col="1" class=" text-grey ft-20 famedium" id="txt_email_addr" hint=" Mobile Number" ></TextField>  
+    <GridLayout rows="*" columns="25,300,*" id="grid_text" class="bg-white" style="padding: 0,15,0,15;"   margin="10,0,10,0">
+      <Label row="0" col="0" class="fas text-violet ft-17"  text="&#xf3cd;" verticalAlignment="center"></Label>
+      <TextField row="0" col="1" class=" text-grey ft-17 famedium" id="txt_email_addr" hint=" Mobile Number" ></TextField>  
     </GridLayout>
 
     <StackLayout orientation="horizontal"  width="100%" height="50" 
@@ -42,10 +42,10 @@
      <Label textWrap="true">
        <FormattedString>
         <CheckBox #CB1 text="CheckBox Label" checked="false"></CheckBox>
-         <Span text="I have read & agree to the" class="text-grey ft-20  famedium"></Span>
-         <Span text=" Terms of use " class="text-violet ft-20 famedium" ></Span>
-         <Span text=" and &#xa; " class="text-grey ft-20 famedium" ></Span>
-         <Span text="Privacy Policy " class="text-violet ft-20 famedium" ></Span>
+         <Span text="I have read & agree to the" class="text-grey ft-17  famedium"></Span>
+         <Span text=" Terms of use " class="text-violet ft-17 famedium" ></Span>
+         <Span text=" and &#xa; " class="text-grey ft-17 famedium" ></Span>
+         <Span text="Privacy Policy " class="text-violet ft-17 famedium" ></Span>
        </FormattedString>
      </Label>
  </StackLayout>

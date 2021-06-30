@@ -1,0 +1,242 @@
+ <ActionBar class="bg_grid1" width="500" height="100">
+    <GridLayout rows="55" columns="40,300">
+            <stackLayout row="0" col="0">
+                <Label class="fas ft-30 brd text-white" text="&#xf0a8;" (tap)="GoTohomepage()"></Label>
+                </stackLayout>
+        <StackLayout row="0" col="1">
+            <SearchBar  hint="Search Grocery Here" class="cat_image text-center" verticalAlignment="center" margin="0,0,0,30"   
+            [text]="searchPhrase" verticalAlignment="center" backgroundColor="#D7B7FC" 
+           (submit)="onSearchSubmit($event)">
+       </SearchBar>
+        </StackLayout>
+    </GridLayout>
+</ActionBar>  
+
+
+<TabView selectedTabTextColor="#000000" 
+         tabBackgroundColor="#f2f2f2"
+         tabTextFontSize="22"
+         androidSelectedTabHighlightColor="green">
+
+    <StackLayout *tabItem="{title: 'Dals & Pulses', iconSource: 'res://grain', textTransform: 'lowercase'}" >
+      <ScrollView  row="1" height="100%" iosOverflowSafeAreaEnabled="false"> 
+        <StackLayout>
+    
+     <ng-container>
+        <ScrollView orientation="vertical" scrollBarIndicatorVisible="false">
+            <StackLayout orientation="vertical">
+    <GridLayout  rows="auto,auto,auto,auto" columns="200,200" verticalAlignment="top" >
+                     
+    
+    <ng-container *ngFor="let item of SeeAllItems1">
+
+      <GridLayout rows="*, *, *,*,*,*" columns="*, *" row="{{item.Row}}" col="{{item.Col}}" margin="6" backgroundColor="#fff0f3">
+    
+        <GridLayout height="50" width="100" row="0" col="0">
+          <image  height="50" width="100" class="cat_image" src="res://discount" stretch="aspectFit" row="0" col="0" margin="6"></image> 
+    
+            <StackLayout row="0" col="0" verticalAlignment="center" horizontalAlignment="left" width="90"  >
+             <Label [text]="item.Discount+'%'" class="bold" margin="0,0,0,35" fontSize="15" color="#fff"></Label>
+             
+         </StackLayout>
+          </GridLayout>
+           
+                  
+          <GridLayout  rows="*" columns="*, *" row="0" col="1" width="70" class="cat_image"  marginTop="10">
+            <image row="0" col="0" height="20" width="18" class="cat_image" src="res://rupeeicon" stretch="aspectFit"></image>
+             <label [text]="item.Points+'pts'" row="0" col="1" height="20" width="40"></label>
+           </GridLayout>
+         
+        <image height="100" width="100" class="cat_image" [src]="item.ImageUrl" stretch="aspectFit" row="1" col="0" colSpan="2"></image> 
+       
+        <StackLayout row="2" col="0" colSpan="2" class="text-center">          
+          <Label [text]="item.Name" textWrap="true" class="text-black" alignContent="center"></Label>
+        </StackLayout>    
+    
+        
+            <Label [text]="'$'+item.Cost+'.'+'00'" row="3" col="0" textWrap="true" class="text-black text-center ft20"  margin="5,0,10,0"></Label>
+            <Label (tap)="showModal()" [text]="'+'+item.SellersCount+'Sellers'" row="3" col="1" textWrap="true" class="text-violet text-center ft20" margin="5,0,10,0" ></Label>           
+        
+          
+            <Label text="Seller" row="4" col="0"  textWrap="true" class="text-grey text-center ft20" ></Label>
+         
+        
+            <Label [text]="item.SellerName" row="5" col="0" textWrap="true" class="text-black text-center ft20" ></Label>
+    
+        <GridLayout rows="*" columns="*,*,*" row="5" col="1"  backgroundColor="#5EC401" height="35" class="cat_image2">
+        
+            <Label row="0" col="0" class="fas ft-15 text-white text-center" (tap)="minusqty1(item)" text="&#xf068;" verticalAlignment="center"></Label>
+            <Label row="0" col="1" class="text-white ft-15 text-center" [text]="item.Quantity" verticalAlignment="center"></Label>
+            <Label row="0" col="2" class="fas ft-15 text-white text-center" (tap)="plusqty1(item)" text="&#xf067;" verticalAlignment="center"></Label>
+    
+        
+        </GridLayout>
+    
+    
+       </GridLayout> 
+
+
+    </ng-container>
+
+
+     </GridLayout>
+    </StackLayout>
+    </ScrollView>
+    </ng-container> 
+    </StackLayout>
+     </ScrollView>
+    
+    </StackLayout>
+
+    <StackLayout *tabItem="{title: 'Edible Oils', iconSource: 'res://edible_oils', textTransform: 'lowercase'}">
+      <ScrollView  row="1" height="100%" iosOverflowSafeAreaEnabled="false"> 
+        <StackLayout>
+    
+     <ng-container>
+        <ScrollView orientation="vertical" scrollBarIndicatorVisible="false">
+            <StackLayout orientation="vertical">
+    <GridLayout  rows="auto,auto,auto,auto" columns="200,200" verticalAlignment="top" >
+                    
+      <ng-container *ngFor="let item of SeeAllItems2">
+
+        <GridLayout rows="*, *, *,*,*,*" columns="*, *" row="{{item.Row}}" col="{{item.Col}}" margin="6" backgroundColor="#fff0f3">
+      
+          <GridLayout height="50" width="100" row="0" col="0">
+            <image  height="50" width="100" class="cat_image" src="res://discount" stretch="aspectFit" row="0" col="0" margin="6"></image> 
+      
+              <StackLayout row="0" col="0" verticalAlignment="center" horizontalAlignment="left" width="90"  >
+               <Label [text]="item.Discount+'%'" class="bold" margin="0,0,0,35" fontSize="15" color="#fff"></Label>
+               
+           </StackLayout>
+            </GridLayout>
+             
+                    
+            <GridLayout  rows="*" columns="*, *" row="0" col="1" width="70" class="cat_image"  marginTop="10">
+              <image row="0" col="0" height="20" width="18" class="cat_image" src="res://rupeeicon" stretch="aspectFit"></image>
+               <label [text]="item.Points+'pts'" row="0" col="1" height="20" width="40"></label>
+             </GridLayout>
+           
+          <image height="100" width="100" class="cat_image" [src]="item.ImageUrl" stretch="aspectFit" row="1" col="0" colSpan="2"></image> 
+         
+          <StackLayout row="2" col="0" colSpan="2" class="text-center">          
+            <Label [text]="item.Name" textWrap="true" class="text-black" alignContent="center"></Label>
+          </StackLayout>    
+      
+          
+              <Label [text]="'$'+item.Cost+'.'+'00'" row="3" col="0" textWrap="true" class="text-black text-center ft20"  margin="5,0,10,0"></Label>
+              <Label [text]="'+'+item.SellersCount+'Sellers'" row="3" col="1" textWrap="true" class="text-violet text-center ft20" margin="5,0,10,0" ></Label>           
+          
+            
+              <Label text="Seller" row="4" col="0"  textWrap="true" class="text-grey text-center ft20" ></Label>
+           
+          
+              <Label [text]="item.SellerName" row="5" col="0" textWrap="true" class="text-black text-center ft20" ></Label>
+      
+          <GridLayout rows="*" columns="*,*,*" row="5" col="1"  backgroundColor="#5EC401" height="35" class="cat_image2">
+          
+              <Label row="0" col="0" class="fas ft-15 text-white text-center" (tap)="minusqty2(item)" text="&#xf068;" verticalAlignment="center"></Label>
+              <Label row="0" col="1" class="text-white ft-15 text-center" [text]="item.Quantity" verticalAlignment="center"></Label>
+              <Label row="0" col="2" class="fas ft-15 text-white text-center" (tap)="plusqty2(item)" text="&#xf067;" verticalAlignment="center"></Label>
+      
+          
+          </GridLayout>
+      
+      
+         </GridLayout> 
+  
+  
+      </ng-container>
+    </GridLayout>
+  </StackLayout>
+  </ScrollView>
+  </ng-container> 
+  </StackLayout>
+   </ScrollView>
+  
+  </StackLayout>
+
+
+
+    <StackLayout *tabItem="{title: 'Beauty & Hygine', iconSource: 'res://tomato', textTransform: 'lowercase'}">
+      <ScrollView  row="1" height="100%" iosOverflowSafeAreaEnabled="false"> 
+        <StackLayout>
+    
+     <ng-container>
+        <ScrollView orientation="vertical" scrollBarIndicatorVisible="false">
+            <StackLayout orientation="vertical">
+    <GridLayout  rows="auto,auto,auto,auto" columns="200,200" verticalAlignment="top" >
+
+      <ng-container *ngFor="let item of SeeAllItems3">
+
+        <GridLayout rows="*, *, *,*,*,*" columns="*, *" row="{{item.Row}}" col="{{item.Col}}" margin="6" backgroundColor="#fff0f3">
+      
+          <GridLayout height="50" width="100" row="0" col="0">
+            <image  height="50" width="100" class="cat_image" src="res://discount" stretch="aspectFit" row="0" col="0" margin="6"></image> 
+      
+              <StackLayout row="0" col="0" verticalAlignment="center" horizontalAlignment="left" width="90"  >
+               <Label [text]="item.Discount+'%'" class="bold" margin="0,0,0,35" fontSize="15" color="#fff"></Label>
+               
+           </StackLayout>
+            </GridLayout>
+             
+                    
+            <GridLayout  rows="*" columns="*, *" row="0" col="1" width="70" class="cat_image"  marginTop="10">
+              <image row="0" col="0" height="20" width="18" class="cat_image" src="res://rupeeicon" stretch="aspectFit"></image>
+               <label [text]="item.Points+'pts'" row="0" col="1" height="20" width="40"></label>
+             </GridLayout>
+           
+          <image height="100" width="100" class="cat_image" [src]="item.ImageUrl" stretch="aspectFit" row="1" col="0" colSpan="2"></image> 
+         
+          <StackLayout row="2" col="0" colSpan="2" class="text-center">          
+            <Label [text]="item.Name" textWrap="true" class="text-black" alignContent="center"></Label>
+          </StackLayout>    
+      
+          
+              <Label [text]="'$'+item.Cost+'.'+'00'" row="3" col="0" textWrap="true" class="text-black text-center ft20"  margin="5,0,10,0"></Label>
+              <Label [text]="'+'+item.SellersCount+'Sellers'" row="3" col="1" textWrap="true" class="text-violet text-center ft20" margin="5,0,10,0" ></Label>           
+          
+            
+              <Label text="Seller" row="4" col="0"  textWrap="true" class="text-grey text-center ft20" ></Label>
+           
+          
+              <Label [text]="item.SellerName" row="5" col="0" textWrap="true" class="text-black text-center ft20" ></Label>
+      
+          <GridLayout rows="*" columns="*,*,*" row="5" col="1"  backgroundColor="#5EC401" height="35" class="cat_image2">
+          
+              <Label row="0" col="0" class="fas ft-15 text-white text-center" (tap)="minusqty3(item)" text="&#xf068;" verticalAlignment="center"></Label>
+              <Label row="0" col="1" class="text-white ft-15 text-center" [text]="item.Quantity" verticalAlignment="center"></Label>
+              <Label row="0" col="2" class="fas ft-15 text-white text-center" (tap)="plusqty3(item)" text="&#xf067;" verticalAlignment="center"></Label>
+      
+          
+          </GridLayout>
+      
+      
+         </GridLayout> 
+  
+  
+      </ng-container>      
+       
+     </GridLayout>
+    </StackLayout>
+    </ScrollView>
+    </ng-container> 
+    </StackLayout>
+     </ScrollView>
+  </StackLayout>
+
+</TabView>
+
+
+
+
+
+
+<GridLayout class="page" [class.dialogOpen]="dialogOpen">
+	<AbsoluteLayout class="dialog-wrapper">
+		<StackLayout class="dialog">
+			<Label class="h3" textWrap="true" text="Are you sure you want to share your data with 42 people?"></Label>
+			<Button class="btn btn-primary" text="Share"></Button>
+			<Button class="btn btn-outline" text="Cancel" (tap)="closeDialog()"></Button>
+		</StackLayout>
+	</AbsoluteLayout>
+</GridLayout>
