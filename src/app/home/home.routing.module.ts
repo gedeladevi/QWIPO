@@ -6,11 +6,11 @@ import { SeeallitemsComponent } from '../seeallitems/seeallitems.component'
 import {CategoryitemsComponent } from '../categoryitems/categoryitems.component'
 import { Seeallitems1Component} from '../seeallitems1/seeallitems1.component'
 import { CommonheaderComponent } from '../commonheader/commonheader.component'
-import { TestComponent } from '../testcomponent/tests.component'
+
   
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  //{ path: '', component: TestComponent },
+ // { path: '', component: HomeComponent },
+  { path: ' ' , component:CommonheaderComponent},
   { path: 'home', component: HomeComponent },
   { path:'seeallitems' , component:SeeallitemsComponent},
   {path:'categorylist' ,component: CategoryitemsComponent},

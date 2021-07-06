@@ -1,6 +1,8 @@
-<ActionBar class="bg-violet">
+<GridLayout>
   <NavigationButton visibility="hidden"></NavigationButton> 
-  <GridLayout columns="130,*,50" row="100">
+  <GridLayout rows="*" columns="*">
+     <image  src="res://header" stretch="aspectFill"></image>
+  <GridLayout columns="130,*,50" row="100" margin="25">
      <stackLayout row="0" col="0">
      <Label class="fas ft-30 brd text-white" text="&#xf0c9;"  (tap)="onDrawerButtonTap()"></Label>
      </stackLayout>
@@ -8,18 +10,46 @@
      <stackLayout  row="0" col="1">
      <Label  class="fas ft20 action-bar-title" (tap)="GoToGoogleMap()">
         <FormattedString>
-         <Span text="Delivary Location &#xa;" class="ft20 fas text-white"  style="line-height: 1;"></Span>
+         <Span text="    Delivary Location &#xa;" class="ft20 fas text-white"  style="line-height: 1;"></Span>
             <Span text=" &#xf0d7;" class="ft20 fas text-white" ></Span>
         </FormattedString>
     </Label>
     <Label text="125,New Creek Road,CA" class="fas ft20 action-bar-title text-white" ></Label>
   </stackLayout>
   
-  <stackLayout  row="0" col="2">
+  <!-- <stackLayout  row="0" col="2">
   </stackLayout>
-  </GridLayout>  
- 
-</ActionBar> 
+  <StackLayout  row="1" col="1" colSpan="2">
+   <SearchBar hint="Search hint" backgroundColor="#D7B7FC" class="cat_image" width="80%" height="40" marginTop="15"
+   [text]="searchPhrase" verticalAlignment="top" 
+  (submit)="onSearchSubmit($event)">
+</SearchBar>
+  </StackLayout> -->
+   <!--<StackLayout  row="2" col="0">
+   <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false">  
+
+      <StackLayout orientation="horizontal" padding="10 10">
+ <GridLayout  rows="150" columns="320,320,320,320,320" marginTop="7">
+  
+  <image src="res://vegetables" stretch="aspectFill" class="cat_image" height="150" width="300" col="0" row="0"  ></image> 
+
+   <image src="res://fruits" stretch="aspectFill" class="cat_image" height="150" width="300" col="1" row="0" ></image> 
+
+   <image src="res://leafy_veg" stretch="aspectFill" class="cat_image" height="150" width="300"  col="2" row="0" ></image> 
+
+   <image src="res://chocolate" stretch="aspectFill" class="cat_image" height="150" width="300" col="3" row="0" ></image> 
+   <image src="res://sale" stretch="aspectFill" class="cat_image" height="150" width="300" col="3" row="0" ></image> 
+
+</GridLayout>
+
+</StackLayout>
+</ScrollView> 
+  </StackLayout>-->
+  </GridLayout> 
+
+</GridLayout> 
+</GridLayout>
+
 
  
 

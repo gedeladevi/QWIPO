@@ -8,7 +8,7 @@ import { CategoryitemsComponent } from '../categoryitems/categoryitems.component
 import { Seeallitems1Component } from '../seeallitems1/seeallitems1.component'
 import { SblqwipoService } from '../Service'
 import { CommonheaderComponent } from '../commonheader/commonheader.component'
-import { TestComponent } from '../testcomponent/tests.component'
+
 
 @NgModule({
   imports: [
@@ -23,7 +23,7 @@ import { TestComponent } from '../testcomponent/tests.component'
     ,CommonhorizontalscrollComponent
     ,Seeallitems1Component 
     ,CommonheaderComponent   
-    ,TestComponent
+   
     ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [SblqwipoService]
