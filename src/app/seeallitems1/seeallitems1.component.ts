@@ -5,7 +5,7 @@ import { DalsAndPulses } from '../Models/DalsAndPulses';
 import { EdilbleOils } from '../Models/EdibleOils';
 import { BeautyAndHygine } from '../Models/BeautyAndHygine';
 import { Component, OnInit } from "@angular/core";
-
+import { Page } from "@nativescript/core/ui/page";
 @Component({
     selector: "seeallitems1",
     moduleId: module.id,
@@ -24,11 +24,9 @@ export class Seeallitems1Component implements OnInit {
         let searchBar = <SearchBar>args.object;
         console.log("You are searching for " + searchBar.text);}
 
-    constructor( private _sblqwipoService:SblqwipoService
-                ,private route:Router
-               ) {
-    }
-  
+    constructor( private _sblqwipoService:SblqwipoService  ,private route:Router,private page: Page)
+        
+               { this.page.actionBarHidden = true;  }
 
     ngOnInit(): void {
 this.SeeAllItems1 = this._sblqwipoService.GetSeeallitems1();

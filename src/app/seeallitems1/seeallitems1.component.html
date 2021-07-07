@@ -1,4 +1,6 @@
- <ActionBar class="bg_grid1" width="500" height="100">
+ <!-- <ActionBar class="bg_grid1" width="500" height="100"> -->
+  <GridLayout rows="*" columns="*" >
+    <image src="res://shortbg" stretch="aspectFit" col="0" row="0"></image>
     <GridLayout rows="55" columns="40,300">
             <stackLayout row="0" col="0">
                 <Label class="fas ft-30 brd text-white" text="&#xf0a8;" (tap)="GoTohomepage()"></Label>
@@ -10,7 +12,8 @@
        </SearchBar>
         </StackLayout>
     </GridLayout>
-</ActionBar>  
+  </GridLayout>
+<!-- </ActionBar>   -->
 
 
 <TabView selectedTabTextColor="#000000" 

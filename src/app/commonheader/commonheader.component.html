@@ -1,4 +1,4 @@
-<GridLayout>
+<!-- <GridLayout>
   <NavigationButton visibility="hidden"></NavigationButton> 
   <GridLayout rows="*" columns="*">
      <image  src="res://header" stretch="aspectFill"></image>
@@ -15,7 +15,7 @@
         </FormattedString>
     </Label>
     <Label text="125,New Creek Road,CA" class="fas ft20 action-bar-title text-white" ></Label>
-  
+   -->
   
   <!-- <stackLayout  row="0" col="2">
   </stackLayout>
@@ -45,12 +45,55 @@
 </StackLayout>
 </ScrollView> 
   </StackLayout>-->
-</stackLayout>
+<!-- </stackLayout>
   </GridLayout> 
 </GridLayout> 
-</GridLayout>
+</GridLayout> -->
 
 
  
+
+<!-- 
+<ActionBar class="class_grid1"> -->
+<!-- <GridLayout class="class_grid1" rows="*" columns="*"> 
+  <NavigationButton visibility="hidden"></NavigationButton>  -->
+  <GridLayout rows="*,*" columns="130,*,50">
+    <image src="res://bgheader1" stretch="aspectFill" row="0" col="0" colSpan="3"></image>
+     <stackLayout row="0" col="0">
+     <Label class="fas fs-30 brd color-white" text="&#xf0c9;"  (tap)="onDrawerButtonTap()"></Label>
+     </stackLayout>
+      
+     <stackLayout  row="0" col="1">
+     <Label  class="fas ft20 action-bar-title" (tap)="GoToGoogleMap()">
+        <FormattedString>
+         <Span text="Delivary Location" class="ft20 fas color-white"  style="line-height: 2;"></Span>
+            <Span text="&#xf0d7;" class="ft20 fas color-white" ></Span>
+        </FormattedString>
+    </Label>
+    <Label class="fas ft20 action-bar-title color-white"  text="125,New Creek Road,CA" ></Label>
+     </stackLayout>
+  
+  <stackLayout  row="0" col="2">
+    <Label class="fas fs-30 color-white" text="&#xf508;"></Label> 
+  </stackLayout>
+
+  <StackLayout  row="0" col="0" colSpan="3" margin="40,0,0,0">
+    <SearchBar hint="Search hint" backgroundColor="#D7B7FC" class="cat_image" width="80%" height="40" marginTop="15"
+    [text]="searchPhrase" verticalAlignment="top" 
+   (submit)="onSearchSubmit($event)">
+ </SearchBar>
+   </StackLayout>
+   <!-- <StackLayout  row="0" col="0" colSpan="3" margin="250,0,0,0">
+    <commonhorizontalscroll></commonhorizontalscroll>
+   </StackLayout> -->
+   
+  </GridLayout>  
+<!-- </GridLayout>  -->
+<!-- </ActionBar>  -->
+
+ 
+
+
+
 
 
