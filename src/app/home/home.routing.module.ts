@@ -9,8 +9,8 @@ import { CommonheaderComponent } from '../commonheader/commonheader.component'
 
   
 const routes: Routes = [
- // { path: '', component: HomeComponent },
-  { path: ' ' , component:CommonheaderComponent},
+  { path: '', component: HomeComponent },
+  //{ path: ' ' , component:CommonheaderComponent},
   { path: 'home', component: HomeComponent },
   { path:'seeallitems' , component:SeeallitemsComponent},
   {path:'categorylist' ,component: CategoryitemsComponent},

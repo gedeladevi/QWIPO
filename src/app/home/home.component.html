@@ -1,13 +1,55 @@
 <GridLayout rows="auto, *">
-   
-<common-header></common-header>
+   <NavigationButton visibility="hidden"></NavigationButton> 
+   <GridLayout rows="*" columns="*">
+      <image  src="res://header" stretch="aspectFill" row="0" col="0"></image>
+    
 
- <ScrollView  row="1" height="100%" iosOverflowSafeAreaEnabled="false">
-   <StackLayout>  
+      <GridLayout columns="*,*,*" row="100,250,*" row="0" col="0" margin="35,20,25,20">
 
-<commonhorizontalscroll></commonhorizontalscroll>
 
-<stacklayout orientation="horizontal" width="100%" height="35" verticalAlignment="top" margin="5,10,0,10">
+         <stackLayout row="0" col="0" style="border: 2px solid red;">
+            <Label class="fas ft-30 text-white" text="&#xf0c9;"  (tap)="onDrawerButtonTap()" ></Label>
+            </stackLayout>
+
+            <stackLayout  row="0" col="1" colSpan="2">
+               <Label (tap)="GoToGoogleMap()" alignContent="center">
+                  <FormattedString>
+                   <Span text="    Delivary Location &#xa;" class="ft-14 fas text-white falight"  style="line-height: 1;"></Span>
+                      <Span text=" &#xf0d7;" class="ft-14 fas text-white" ></Span>
+                  </FormattedString>
+              </Label>
+              <Label text="125,New Creek Road,CA" class="fas ft-17 falight text-white" ></Label>
+             </stackLayout>
+
+             <stackLayout  row="1" col="0" colSpan="3" margin="45,0,0,0">
+               <SearchBar hint="Search hint" backgroundColor="#D7B7FC" id="txtxearch" height="60" marginTop="25"
+                       [text]="searchPhrase" verticalAlignment="top" 
+                      (submit)="onSearchSubmit($event)">
+                  </SearchBar> 
+               </stackLayout>
+            </GridLayout>
+          
+     
+             <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false"  colSpan="3">  
+
+             <StackLayout orientation="horizontal" margin="180,0,0,0" >
+             <GridLayout  rows="170" columns="320,320,320,320,320" marginTop="7">
+              
+              <image src="res://vegetables" stretch="aspectFill" class="cat_image" height="150" width="300" col="0" row="0"  ></image> 
+           
+               <image src="res://fruits" stretch="aspectFill" class="cat_image" height="150" width="300" col="1" row="0" ></image> 
+           
+               <image src="res://leafy_veg" stretch="aspectFill" class="cat_image" height="150" width="300"  col="2" row="0" ></image> 
+           
+               <image src="res://chocolate" stretch="aspectFill" class="cat_image" height="150" width="300" col="3" row="0" ></image> 
+               <image src="res://sale" stretch="aspectFill" class="cat_image" height="150" width="300" col="4" row="0" ></image> 
+           
+           </GridLayout>
+           
+           </StackLayout>
+           </ScrollView>
+
+<stacklayout orientation="horizontal" width="100%" height="35" margin="0,10,0,10">
    <Label text="Catagories" (tap)="GoToCategories()" class="ft20"  width="80%" height="30" style="padding-left: 20;"></Label>     
    <Label  width="20%" height="30" (tap)="GoToSeeAllItems()">
       <FormattedString>
@@ -24,6 +66,8 @@
 <ng-container *ngIf="isseeallshow">
 <seeall-items></seeall-items>
 </ng-container>
+<ScrollView  row="1" height="100%" iosOverflowSafeAreaEnabled="false">
+   <StackLayout>
 
         <stacklayout orientation="horizontal" width="100%" height="50" verticalAlignment="top" backgroundcolor="red">
             <Label text="Recommanded Products" class="ft20"  width="80%" height="40" style="padding-left: 20;"></Label>     
@@ -72,8 +116,6 @@
    </ScrollView>
 </ng-container> 
 
-
-
 <stacklayout orientation="horizontal" width="100%" height="50" verticalAlignment="top" >
    <Label text="Hot Deals" class="ft20"  width="80%" height="40" style="padding-left: 20;"></Label>    
 </stacklayout>
@@ -82,12 +124,11 @@
    <GridLayout columns="auto,auto" rows="auto" verticalAlignment="top"  margin="5,0,0,0">
 
       <ng-container >
-         <GridLayout height="160" margin="0,15,0,15" width="170" class="cat_image" row="0" col="0">
-            <image  height="150" margin="5,15,0,15" width="150" class="cat_image"
-            src="res://flour3" stretch="aspectFill" ></image>
+         <GridLayout height="150" margin="0,15,0,15" width="170" class="cat_image" row="0" col="0">
+            <image  height="110" margin="5,15,0,15" width="150" class="cat_image"
+            src="res://fortune" stretch="aspectFit" ></image>
             </GridLayout>
         </ng-container>
-
 
         <ng-container >
          <GridLayout row="*,*" columns="*" row="0" col="1"  height="160" margin="0,8,0,8" width="170"
@@ -105,8 +146,8 @@
                   </StackLayout>
               </StackLayout>
               </GridLayout>
-          
         </ng-container>
+
       </GridLayout>                
    </ng-container>
 
@@ -115,8 +156,6 @@
       <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false" backgroundColor="#F0EBAF" margin="15,0,0,0">
          <StackLayout orientation="horizontal">
             <GridLayout  rows="auto" columns="200,200,200,200,200,200,200,200">
-           
-               
            <ng-container *ngFor="let item of Buyagainitems">
            <GridLayout row="{{item.Row}}" col="{{item.Col}}" rows="*,*,*,*" columns="*,*,*" margin="15,7.5,15,15"  backgroundColor="#FFFFFF" class="cat_image grid-border">
                  <image [src]="item.ImageUrl" stretch="aspectFit" row="0" col="0" colSpan="3" width="100" height="100" margin="20,20,10,20"></image>
@@ -127,15 +166,14 @@
                  padding="5,0,0,0"></label> 
            </GridLayout>
           </ng-container>
-        
-
    </GridLayout>      
 </StackLayout>
 </ScrollView>
 </ng-container> 
        
-         
+        
       </StackLayout>
-  </ScrollView> 
+  </ScrollView>  
+
   </GridLayout> 
- 
+ </GridLayout> 

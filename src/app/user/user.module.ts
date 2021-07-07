@@ -7,6 +7,8 @@ import { RegistrationComponent } from "./registration/registration.component";
 import { OtpverificationComponent } from "./otpverification/otpverification.component";
 import { AccountactivationComponent } from "./accountactivation/accountactivation.component";
 import { AddlocationComponent } from "./addlocation/addlocation.component";
+import { VenderlistComponent} from "./venderlist/venderlist.component"
+
  
 @NgModule({
     imports: [
@@ -20,7 +22,8 @@ import { AddlocationComponent } from "./addlocation/addlocation.component";
         RegistrationComponent,
         OtpverificationComponent,
         AccountactivationComponent,
-        AddlocationComponent
+        AddlocationComponent,
+        VenderlistComponent
     ],
     schemas: [NO_ERRORS_SCHEMA]
 })

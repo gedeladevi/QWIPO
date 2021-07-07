@@ -8,8 +8,8 @@ import { Application } from '@nativescript/core'
 import { Recommandeditems } from '../Models/Recommandeditems';
 import { SblqwipoService } from '../Service';
 import { Buyagainitems } from '../Models/Buyagainitems';
-import { Page } from '@nativescript/core/ui/page';
-
+import { Page } from "@nativescript/core/ui/page";
+import { SearchBar } from 'tns-core-modules';
  registerElement('CardView', () => CardView);
 
 @Component({
@@ -28,8 +28,12 @@ export class HomeComponent implements OnInit {
 }
 
 isseeallshow:Boolean=false;
-  constructor(private route:Router , private _sblqwipoService:SblqwipoService,private page: Page) {
-this.page.actionBarHidden= false;
+searchPhrase: string;
+  onSearchSubmit(args): void {
+      let searchBar = <SearchBar>args.object;
+      console.log("You are searching for " + searchBar.text);}
+  constructor(private route:Router,private page: Page , private _sblqwipoService:SblqwipoService) {
+    this.page.actionBarHidden = true;
   }
 
   ngOnInit(): void {
