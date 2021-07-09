@@ -9,12 +9,11 @@ import { CommonheaderComponent } from '../commonheader/commonheader.component'
 
   
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  //{ path: ' ' , component:CommonheaderComponent},
+  { path: '', component: Seeallitems1Component },
   { path: 'home', component: HomeComponent },
   { path:'seeallitems' , component:SeeallitemsComponent},
-  {path:'categorylist' ,component: CategoryitemsComponent},
-  {path:'seeallitems1',component:Seeallitems1Component},
+  { path:'categorylist' ,component: CategoryitemsComponent},
+  { path:'seeallitems1',component:Seeallitems1Component},
   { path: 'commonheader' , component:CommonheaderComponent}
 ]
 

@@ -1,19 +1,33 @@
- <!-- <ActionBar class="bg_grid1" width="500" height="100"> -->
-  <GridLayout rows="*" columns="*" >
-    <image src="res://shortbg" stretch="aspectFit" col="0" row="0"></image>
-    <GridLayout rows="55" columns="40,300">
-            <stackLayout row="0" col="0">
-                <Label class="fas ft-30 brd text-white" text="&#xf0a8;" (tap)="GoTohomepage()"></Label>
-                </stackLayout>
-        <StackLayout row="0" col="1">
-            <SearchBar  hint="Search Grocery Here" class="cat_image text-center" verticalAlignment="center" margin="0,0,0,30"   
-            [text]="searchPhrase" verticalAlignment="center" backgroundColor="#D7B7FC" 
-           (submit)="onSearchSubmit($event)">
-       </SearchBar>
-        </StackLayout>
-    </GridLayout>
+<!-- <ActionBar class="class_grid1" width="500" height="100">
+  <GridLayout rows="55" columns="40,300">
+          <stackLayout row="0" col="0">
+              <Label class="fas fs-30 brd color-white" text="&#xf0a8;" (tap)="GoTohomepage()"></Label>
+              </stackLayout>
+      <StackLayout row="0" col="1">
+          <SearchBar  hint="Search Grocery Here" class="cat_image text-center" verticalAlignment="center" margin="0,0,0,30"   
+          [text]="searchPhrase" verticalAlignment="center" backgroundColor="#D7B7FC" 
+         (submit)="onSearchSubmit($event)">
+     </SearchBar>
+      </StackLayout>
   </GridLayout>
-<!-- </ActionBar>   -->
+</ActionBar> -->
+
+
+<GridLayout rows="*" columns="*">
+  <image src="res://shortbg" stretch="aspectFit" col="0" row="0"></image>
+
+  <GridLayout rows="*" columns="80,300,200" verticalAlignment="center" horizontalAlignment="center">
+    <StackLayout row="0" col="0" padding="11,4,4,4" margin="0,0,0,30" class="back_border">
+    <image src="res://back" stretch="aspectFit" width="25" class="text-center"></image>
+    </StackLayout>
+    <StackLayout row="0" col="1">
+      <SearchBar  hint="Search Grocery Here" class="cat_image text-center" verticalAlignment="center" margin="0,0,0,30"   
+      [text]="searchPhrase" verticalAlignment="center" backgroundColor="#D7B7FC" 
+     (submit)="onSearchSubmit($event)">
+ </SearchBar>
+  </StackLayout>
+           </GridLayout>
+</GridLayout>
 
 
 <TabView selectedTabTextColor="#000000" 

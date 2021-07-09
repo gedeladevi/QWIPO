@@ -4,14 +4,12 @@
   <StackLayout orientation="vertical" class="bg-gray">
       <GridLayout rows="*" columns="*">
         <image src="res://shortbg" stretch="aspectFit" col="0" row="0"></image>
-
-      <GridLayout rows="*" columns="90,250,200" verticalAlignment="center" horizontalAlignment="center">
-<!-- <Label  text="&#xf3e5;" row="0" col="0" class=" ft-35 fas text-white text-center br-radius-25 lbllogin2" margin="30,25,30,25" ></Label>   -->
-
-         <image src="res://back" stretch="aspectFit" col="0" row="0" class="  text-center  lbllogin2" margin="30,25,30,25" padding="10"></image> 
-        <Label text="Vendors" class="qwipo2 fabold ft-30 text-white" alignItems="left" col="1" row="0" margin="0,0,0,10"></Label>
-        <Label  col="2" row="0" ></Label>
-      </GridLayout>
+        <GridLayout rows="*" columns="70,300,200" verticalAlignment="center" horizontalAlignment="center">
+          <StackLayout row="0" col="0" padding="4,3,3,3" margin="0,0,0,30" class="back_border">
+          <image src="res://back" stretch="aspectFit" width="20" class="text-center"></image>
+          </StackLayout>
+           <Label text="Vendors" class="qwipo2 fabold ft-25 text-white" alignItems="left" col="1" row="0" margin="0,20,0,10"></Label>
+                 </GridLayout>
       </GridLayout>
 
     <GridLayout columns="auto,auto" rows="auto,auto,auto">

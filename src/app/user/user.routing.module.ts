@@ -8,20 +8,21 @@ import { OtpverificationComponent } from "./otpverification/otpverification.comp
 import { AccountactivationComponent} from "./accountactivation/accountactivation.component"
 import { AddlocationComponent } from "./addlocation/addlocation.component"
 import { VenderlistComponent } from "./venderlist/venderlist.component";
-
-
+import { TermsandconditionsComponent } from "./termsandconditions/termsandconditions.component"
+import { OrderconformationComponent } from "./orderconformation/orderconformation.component"
+import {NotificationComponent } from "./notification/notification.component"
     const routes: Routes = [
-        //{ path: "" , component: SplashComponent},
-       // { path: "" , component:AddlocationComponent},
-        { path: "", component:VenderlistComponent},
+        { path: "", component:NotificationComponent},
         { path: "splash", component: SplashComponent },
         { path: "login" , component: LoginComponent},
         { path: "registration", component: RegistrationComponent},
         { path: "otpverification" ,component:OtpverificationComponent},
         { path: "accountactivation", component:AccountactivationComponent},
         { path: "addlocation" , component:AddlocationComponent},
-        { path: "venderlist", component:VenderlistComponent}
-      
+        { path: "venderlist", component:VenderlistComponent},
+        { path: "termsandconditions" , component:TermsandconditionsComponent},
+        { path:"orderconformation" , component:OrderconformationComponent },
+        { path: "notification", component:NotificationComponent}
     ];    
     @NgModule({
         imports: [NativeScriptRouterModule.forChild(routes)],

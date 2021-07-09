@@ -8,6 +8,9 @@ import { OtpverificationComponent } from "./otpverification/otpverification.comp
 import { AccountactivationComponent } from "./accountactivation/accountactivation.component";
 import { AddlocationComponent } from "./addlocation/addlocation.component";
 import { VenderlistComponent} from "./venderlist/venderlist.component"
+import { TermsandconditionsComponent } from "./termsandconditions/termsandconditions.component";
+import { OrderconformationComponent } from "./orderconformation/orderconformation.component";
+import { NotificationComponent } from "./notification/notification.component";
 
  
 @NgModule({
@@ -23,7 +26,10 @@ import { VenderlistComponent} from "./venderlist/venderlist.component"
         OtpverificationComponent,
         AccountactivationComponent,
         AddlocationComponent,
-        VenderlistComponent
+        VenderlistComponent,
+        TermsandconditionsComponent,
+        OrderconformationComponent,
+        NotificationComponent
     ],
     schemas: [NO_ERRORS_SCHEMA]
 })

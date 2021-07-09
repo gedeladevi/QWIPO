@@ -1,95 +1,28 @@
-<!-- <GridLayout>
-  <NavigationButton visibility="hidden"></NavigationButton> 
-  <GridLayout rows="*" columns="*">
-     <image  src="res://header" stretch="aspectFill"></image>
-  <GridLayout columns="130,*,50" row="100" margin="25">
-     <stackLayout row="0" col="0">
-     <Label class="fas ft-30 brd text-white" text="&#xf0c9;"  (tap)="onDrawerButtonTap()"></Label>
-     </stackLayout>
-      
-     <stackLayout  row="0" col="1">
-     <Label  class="fas ft20 action-bar-title" (tap)="GoToGoogleMap()">
-        <FormattedString>
-         <Span text="    Delivary Location &#xa;" class="ft20 fas text-white"  style="line-height: 1;"></Span>
-            <Span text=" &#xf0d7;" class="ft20 fas text-white" ></Span>
-        </FormattedString>
-    </Label>
-    <Label text="125,New Creek Road,CA" class="fas ft20 action-bar-title text-white" ></Label>
-   -->
-  
-  <!-- <stackLayout  row="0" col="2">
-  </stackLayout>
-  <StackLayout  row="1" col="1" colSpan="2">
-   <SearchBar hint="Search hint" backgroundColor="#D7B7FC" class="cat_image" width="80%" height="40" marginTop="15"
-   [text]="searchPhrase" verticalAlignment="top" 
-  (submit)="onSearchSubmit($event)">
-</SearchBar>
-  </StackLayout> -->
-   <!--<StackLayout  row="2" col="0">
-   <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false">  
 
-      <StackLayout orientation="horizontal" padding="10 10">
- <GridLayout  rows="150" columns="320,320,320,320,320" marginTop="7">
-  
-  <image src="res://vegetables" stretch="aspectFill" class="cat_image" height="150" width="300" col="0" row="0"  ></image> 
-
-   <image src="res://fruits" stretch="aspectFill" class="cat_image" height="150" width="300" col="1" row="0" ></image> 
-
-   <image src="res://leafy_veg" stretch="aspectFill" class="cat_image" height="150" width="300"  col="2" row="0" ></image> 
-
-   <image src="res://chocolate" stretch="aspectFill" class="cat_image" height="150" width="300" col="3" row="0" ></image> 
-   <image src="res://sale" stretch="aspectFill" class="cat_image" height="150" width="300" col="3" row="0" ></image> 
-
-</GridLayout>
-
-</StackLayout>
-</ScrollView> 
-  </StackLayout>-->
-<!-- </stackLayout>
-  </GridLayout> 
-</GridLayout> 
-</GridLayout> -->
-
-
- 
-
-<!-- 
-<ActionBar class="class_grid1"> -->
-<!-- <GridLayout class="class_grid1" rows="*" columns="*"> 
-  <NavigationButton visibility="hidden"></NavigationButton>  -->
-  <GridLayout rows="*,*" columns="130,*,50">
+  <GridLayout rows="*,*" columns="130,*,50" >
     <image src="res://bgheader1" stretch="aspectFill" row="0" col="0" colSpan="3"></image>
-     <stackLayout row="0" col="0">
-     <Label class="fas fs-30 brd color-white" text="&#xf0c9;"  (tap)="onDrawerButtonTap()"></Label>
+     <stackLayout row="0" col="0" >
+     <Label class="fas ft-30 text-white grid-border" text="&#xf0c9;" margin="35,25,25,25"   (tap)="onDrawerButtonTap()"></Label>
      </stackLayout>
       
      <stackLayout  row="0" col="1">
-     <Label  class="fas ft20 action-bar-title" (tap)="GoToGoogleMap()">
+     <Label  alignContent="center" (tap)="GoToGoogleMap()" margin="35,25,0,25">
         <FormattedString>
-         <Span text="Delivary Location" class="ft20 fas color-white"  style="line-height: 2;"></Span>
-            <Span text="&#xf0d7;" class="ft20 fas color-white" ></Span>
+          <Span text="    Delivary Location &#xa;" class="ft-15 fas text-white falight"  style="line-height: 0.2;"></Span>
+          <Span text=" &#xf0d7;" class="ft-15 fas text-white" ></Span>
         </FormattedString>
     </Label>
-    <Label class="fas ft20 action-bar-title color-white"  text="125,New Creek Road,CA" ></Label>
+    <Label text="125,New Creek Road,CA" class="fas ft-17 falight text-white" ></Label>
      </stackLayout>
-  
-  <stackLayout  row="0" col="2">
-    <Label class="fas fs-30 color-white" text="&#xf508;"></Label> 
-  </stackLayout>
 
-  <StackLayout  row="0" col="0" colSpan="3" margin="40,0,0,0">
-    <SearchBar hint="Search hint" backgroundColor="#D7B7FC" class="cat_image" width="80%" height="40" marginTop="15"
-    [text]="searchPhrase" verticalAlignment="top" 
+  <StackLayout  row="0" col="0" colSpan="3" margin="130,15,0,15">
+    <SearchBar hint="Search Grocery Here" backgroundColor="#D7B7FC" id="txtsearch" height="60" class="cat_image1"
+    [text]="searchPhrase"  
    (submit)="onSearchSubmit($event)">
  </SearchBar>
    </StackLayout>
-   <!-- <StackLayout  row="0" col="0" colSpan="3" margin="250,0,0,0">
-    <commonhorizontalscroll></commonhorizontalscroll>
-   </StackLayout> -->
-   
   </GridLayout>  
-<!-- </GridLayout>  -->
-<!-- </ActionBar>  -->
+
 
  
 

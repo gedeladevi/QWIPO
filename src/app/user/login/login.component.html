@@ -10,13 +10,14 @@
     <Label text="Enter Email and Password to continue" class="text-grey ft-17 famedium" textWrap="true" padding="10,0,10,10"></Label>
     <GridLayout rows="*" columns="25,300,*" id="grid_text" class="bg-white" style="padding: 0,15,0,15;"   margin="10,0,10,0">
       <Label row="0" col="0" class="fas text-violet ft-17"  text="&#xf0e0;" verticalAlignment="center"></Label>
-      <TextField row="0" col="1" class=" text-grey ft-17 famedium" id="txt_email_addr" hint="Email Address" ></TextField>  
+      <TextField row="0" col="1" class=" text-grey ft-17 famedium txt_email_addr"  hint="Email Address" ></TextField>  
     </GridLayout>
 
     <GridLayout rows="*" columns="25,300,*" id="grid_text" style="padding: 0,15,0,15;" class="bg-white"  margin="10,0,10,0">
       <Label row="0" col="0" class="fas text-violet ft-17"  text="&#xf023;" verticalAlignment="center" ></Label>
-      <TextField row="0" col="1" hint="Password" id="txt_password"  secure="true"
-      returnKeyType="done" class="text-grey ft-17 famedium"></TextField> 
+      <TextField row="0" col="1" hint="Password" secure="true"
+      returnKeyType="done" class="text-grey ft-17 famedium txt_email_addr"></TextField> 
+      
       <Label row="0" col="2" class="fas text-grey ft-17" verticalAlignment="center" text="&#xf06e;" *ngIf="!ispasswordshow" (tap)="passwordshow()"></Label> 
       <Label row="0" col="2" class="fas text-grey ft-17" verticalAlignment="center" text="&#xf070;" *ngIf="ispasswordshow" (tap)="passwordhide()"></Label>  
     </GridLayout>
@@ -27,8 +28,13 @@
       <Button text="Login"  class="ft-21 fabold btnlogin1" (tap)="GoTohomepage()"></Button> 
    </StackLayout>
   
-    <Label text="or Login with" class="famedium text-grey ft-17"  horizontalAlignment="center" textWrap="true"  margin="0,0,10,0"></Label> 
-  
+    
+    <StackLayout orientation="horizontal" class="text-center" margin="10,50,10,50">
+      <label class="line" width="100"></label>
+      <Label text="or Login with" class="famedium text-grey ft-15"width="100"></Label> 
+      <label class="line1" width="100" ></label>  
+    </StackLayout>
+
     <StackLayout orientation="horizontal" horizontalAlignment="center" margin="10,0,10,0">
       <Button class="ft-21 famedium" id="facebook"  >
         <FormattedString>
