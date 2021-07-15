@@ -5,10 +5,10 @@ import { HomeComponent } from './home.component'
 import { SeeallitemsComponent } from '../seeallitems/seeallitems.component'
 import { CommonhorizontalscrollComponent} from '../commonhorizontalscroll/commonhorizontalscroll.component'
 import { CategoryitemsComponent } from '../categoryitems/categoryitems.component'
-import { Seeallitems1Component } from '../seeallitems1/seeallitems1.component'
+import { productlistV1Component } from '../productlistV1/productlistV1.component'
 import { SblqwipoService } from '../Service'
 import { CommonheaderComponent } from '../commonheader/commonheader.component'
-
+import { VendorproductlistComponent } from './vendorproductlist/vendorproductlist.component'
 
 @NgModule({
   imports: [
@@ -21,8 +21,9 @@ import { CommonheaderComponent } from '../commonheader/commonheader.component'
     ,SeeallitemsComponent 
     ,CategoryitemsComponent
     ,CommonhorizontalscrollComponent
-    ,Seeallitems1Component 
-    ,CommonheaderComponent   
+    ,productlistV1Component 
+    ,CommonheaderComponent 
+    ,VendorproductlistComponent
    
     ],
   schemas: [NO_ERRORS_SCHEMA],

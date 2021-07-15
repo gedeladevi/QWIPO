@@ -9,8 +9,8 @@ import { NativeScriptUIAutoCompleteTextViewModule } from "nativescript-ui-autoco
 import { NativeScriptUIGaugeModule } from "nativescript-ui-gauge/angular";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
-import { AddlocationRoutingModule } from "./addlocation-routing.module";
-import { AddlocationComponent } from "./addlocation.component";
+import { SearchRoutingModule } from "./search-routing.module";
+import { SearchComponent } from "./search.component";
 
 @NgModule({
     imports: [
@@ -22,14 +22,14 @@ import { AddlocationComponent } from "./addlocation.component";
         NativeScriptUIAutoCompleteTextViewModule,
         NativeScriptUIGaugeModule,
         NativeScriptCommonModule,
-        AddlocationRoutingModule,
+        SearchRoutingModule,
         NativeScriptFormsModule
     ],
     declarations: [
-        AddlocationComponent
+        SearchComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
     ]
 })
-export class AddlocationModule { }
+export class SearchModule { }

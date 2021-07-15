@@ -1,22 +1,23 @@
 
-  <GridLayout rows="*,*" columns="130,*,50" >
+  <GridLayout rows="*,*" columns="130,*,50" > 
     <image src="res://bgheader1" stretch="aspectFill" row="0" col="0" colSpan="3"></image>
-     <stackLayout row="0" col="0" >
-     <Label class="fas ft-30 text-white grid-border" text="&#xf0c9;" margin="35,25,25,25"   (tap)="onDrawerButtonTap()"></Label>
-     </stackLayout>
+  
+     <StackLayout row="0" col="0" padding="9,5,5,5" width="45" height="45"  margin="0,0,190,0" class="back_border" (tap)="onDrawerButtonTap()">
+      <image src="res://menu" stretch="aspectFit" width="20" class="text-center"></image>
+      </StackLayout>
       
      <stackLayout  row="0" col="1">
      <Label  alignContent="center" (tap)="GoToGoogleMap()" margin="35,25,0,25">
         <FormattedString>
-          <Span text="    Delivary Location &#xa;" class="ft-15 fas text-white falight"  style="line-height: 0.2;"></Span>
-          <Span text=" &#xf0d7;" class="ft-15 fas text-white" ></Span>
+          <Span text="    Delivary Location &#xa;" class="ft-13 fas text-white falight"  style="line-height: 0.2;"></Span>
+          <Span text=" &#xf0d7;" class="ft-13 fas text-white" ></Span>
         </FormattedString>
     </Label>
-    <Label text="125,New Creek Road,CA" class="fas ft-17 falight text-white" ></Label>
+    <Label text="125,New Creek Road,CA" class="fas ft-15 falight text-white" ></Label>
      </stackLayout>
 
   <StackLayout  row="0" col="0" colSpan="3" margin="130,15,0,15">
-    <SearchBar hint="Search Grocery Here" backgroundColor="#D7B7FC" id="txtsearch" height="60" class="cat_image1"
+    <SearchBar hint="Search Grocery Here" backgroundColor="#B167FB" class="txtsearch" height="60" class="cat_image1"
     [text]="searchPhrase"  
    (submit)="onSearchSubmit($event)">
  </SearchBar>

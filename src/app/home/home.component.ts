@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
   MixItems : Recommandeditems[]=[];
   Buyagainitems: Buyagainitems[]=[];
-
+  qty: number = 0;
   onScroll(args: ScrollEventData) {
     const scrollView = args.object as ScrollView;    
 }
@@ -66,8 +66,15 @@ this.Buyagainitems = this._sblqwipoService.formateItems5(this.Buyagainitems);
       this.isseeallshow=true;
       
     }
-    GoToSeeAllItems1():void{
-      this.route.navigate(["/home/seeallitems1"])
+
+minusqty(item:Recommandeditems):void{
+  item.Quantity--;
+
+
+}
+plusqty(item:Recommandeditems):void{
+   item.Quantity++;
+   
 }
 
 }

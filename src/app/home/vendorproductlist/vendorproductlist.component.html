@@ -1,0 +1,281 @@
+<ScrollView height="100%" row="1" col="0">
+    <GridLayout rows="auto,*" columns="*" class="bg-gray">   
+       <GridLayout rows="*,*" columns="130,*,50"  col="0" row="0"> 
+        <image src="res://bgheader1" stretch="aspectFill" row="0" col="0" colSpan="3"></image>
+      
+         <StackLayout row="0" col="0" padding="9,5,5,5" width="45" height="45"  margin="0,0,190,0" class="back_border" (tap)="onDrawerButtonTap()">
+          <image src="res://menu" stretch="aspectFit" width="20" class="text-center"></image>
+          </StackLayout>
+          
+         <stackLayout  row="0" col="1">
+         <Label  alignContent="center" (tap)="GoToGoogleMap()" margin="35,25,0,25">
+            <FormattedString>
+              <Span text="    Delivary Location &#xa;" class="ft-13 fas text-white falight"  style="line-height: 0.2;"></Span>
+              <Span text=" &#xf0d7;" class="ft-13 fas text-white" ></Span>
+            </FormattedString>
+        </Label>
+        <Label text="125,New Creek Road,CA" class="fas ft-15 falight text-white" ></Label>
+         </stackLayout>
+    
+      <StackLayout  row="0" col="0" colSpan="3" margin="130,15,0,15">
+        <SearchBar hint="Search Vendors" backgroundColor="#B167FB" class="txtsearch" height="60" class="cat_image1"
+        [text]="searchPhrase"  
+       (submit)="onSearchSubmit($event)">
+     </SearchBar>
+       </StackLayout>
+      </GridLayout>  
+        
+          <StackLayout margin="210,0,0,0">  
+       
+            <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false" >  
+
+                <StackLayout orientation="horizontal" padding="10 10">
+           <GridLayout  rows="160" columns="360,360,360,360,360">
+            
+            <image src="res://vegetables" stretch="aspectFill" class="cat_image" height="160" width="345" col="0" row="0"  ></image> 
+         
+             <image src="res://fruits" stretch="aspectFill" class="cat_image" height="160" width="345" col="1" row="0" ></image> 
+         
+             <image src="res://leafy_veg" stretch="aspectFill" class="cat_image" height="160" width="345"  col="2" row="0" ></image> 
+         
+             <image src="res://chocolate" stretch="aspectFill" class="cat_image" height="160" width="345" col="3" row="0" ></image> 
+          
+            
+             <GridLayout  rows="*" col="*" col="4" row="0"  >
+         <image src="res://sunita" stretch="aspectFill" class="cat_image" col="0" row="0" height="150" width="345"></image> 
+         <stacklayout row="0" col="0" margin="10,10,10,20">
+         <label text="SUNITA" class="text-white ft-15 fasemibold"></label>
+         <stacklayout orientation="horizontal">
+             <label text="&#xf3c5;" class="fas text-white ft-15 "></label>
+             <label text="Lorem ipsum is simply" class="text-white ft-15" margin="0,0,0,10"></label>
+         </stacklayout>
+         <label text="dummy text the printing" class="text-white ft-15"></label>
+         <label text="and......" class="text-white ft-15"></label>
+         <stacklayout orientation="horizontal" width="100" height="30" class="bg-white text-green cat_image ft-12 text-center left">
+         <label text="&#xf879;" class="fas" margin="5"></label>
+         <label text="Contact" class="fasemibold" margin="5"></label>
+         </stacklayout>
+         </stacklayout>
+             </GridLayout>
+         </GridLayout>
+         
+         </StackLayout>
+         </ScrollView>
+       
+       <stacklayout orientation="horizontal" width="100%" height="35" verticalAlignment="top" margin="5,10,0,10">
+          <Label text="Categories" (tap)="GoToCategories()" class="ft-17 fabold"  width="80%" height="30" style="padding-left: 20;"></Label>     
+          <Label  width="20%" height="30" (tap)="GoToSeeAllItems()">
+             <FormattedString>
+                <Span text="See All  " class="ft-15 text-violet fasemibold"></Span>
+                   <Span text="&#xf0da;" class="ft-15 fas text-violet ml-10"></Span>
+               </FormattedString>
+         </Label>
+       </stacklayout>  
+             
+        <ng-container *ngIf="!isseeallshow"> 
+       <categoryitems></categoryitems>
+       </ng-container> 
+       
+       <ng-container *ngIf="isseeallshow">
+       <seeall-items></seeall-items>
+       </ng-container>
+       
+               <stacklayout orientation="horizontal" width="100%" height="50" verticalAlignment="top" backgroundcolor="red">
+                   <Label text="Recommanded Products" class="ft-17 fasemibold"  width="80%" height="40" style="padding-left: 20;"></Label>     
+                   <Label  width="20%" height="30">
+                      <FormattedString>
+                       <Span text="See All  " class="text-violet fasemibold ft-15"></Span>
+                          <Span text="&#xf0da;" class="ft-15 fas text-violet ml-10"></Span>
+                      </FormattedString>
+                  </Label>
+                </stacklayout>
+               
+       
+                <ng-container>
+                   <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false">
+                      <StackLayout orientation="horizontal">
+                         <GridLayout  rows="auto" columns="200,200,200,200,200,200,200,200,200,200,200," >
+       
+                        <ng-container *ngFor = "let item of MixItems">
+       
+                            <GridLayout rows="*, *, *" columns="*, *" row="{{item.Row}}" col="{{item.Col}}" margin="6" class="bg-white">
+                        
+                            <GridLayout height="50" width="100" row="0" col="0">
+                              <image  height="50" width="100" class="cat_image" src="res://discount" stretch="aspectFit" row="0" col="0" margin="6"></image> 
+                        
+                                <StackLayout row="0" col="0" verticalAlignment="center" horizontalAlignment="left" width="90"  >
+                                 <Label [text]="item.Discount+'%'" class="bold" margin="0,0,0,35" fontSize="15" color="#fff"></Label>
+                             </StackLayout>
+                              </GridLayout>
+    
+                             <GridLayout rows="*" columns="*,30,*" row="0" col="1" height="35" width="70" marginTop="10">
+                               <Label row="0" col="0" class=" text-black fas ft-10 text-center" (tap)="minusqty(item)" text="&#xf068;" verticalAlignment="center"></Label>
+                               <Label row="0" col="1"  class="text-white faregular ft-15 text-center cat_image4" [text]="item.Quantity" verticalAlignment="center" backgroundColor="#5EC401"></Label>
+                               <Label row="0" col="2" class=" text-black fas ft-10 text-center" (tap)="plusqty(item)" text="&#xf067;" verticalAlignment="center"></Label>
+                           </GridLayout>
+                               
+                             
+                            <image height="100" width="100" class="cat_image" [src]="item.ImageUrl" stretch="aspectFit" row="1" col="0" colSpan="2"></image> 
+                           
+                            <StackLayout row="2" col="0" colSpan="2" class="text-center">
+                               <Label [text]="item.Fname" textWrap="true" class="color-black" alignContent="center"></Label>
+                               <Label [text]="item.Lname" textWrap="true" class="color-black" alignContent="center"></Label>           
+                                <Label >
+                                <FormattedString>
+                                  <Span [text]="'$'+item.OriginalCost" class="text-green ft-12  famedium"></Span>
+                                  <Span [text]=" '$'+item.OfferCost" class="text-grey ft-12 strike famedium" ></Span>
+                                  <Span [text]="  '+'+item.SellersCount+'sellers'" class="text-black ft-12 famedium" ></Span>
+                                </FormattedString>
+                              </Label>
+                             <StackLayout orientation="horizontal" row="2" col="0" colSpan="2" margin="10">
+                              <Label text="Qty" class="text-grey ft-14  famedium" margin="0,50,0,0"></Label>
+                              <Label [text]="item.Qty+'Kgs'" class="text-black ft-14  famedium bg-gray"></Label>
+                              <Label text="  &#xf0d7;    " class="text-black ft-14 fas bg-gray" ></Label>
+                             </StackLayout>
+                             <StackLayout orientation="horizontal" row="2" col="0" colSpan="2" margin="0,10,10,10">
+                                <Label text="seller" class="text-grey ft-14  famedium" margin="0,50,0,0"></Label>
+                                <Label [text]="item.SellerName" class="text-black ft-14 bg-grey famedium"></Label>
+                               </StackLayout>
+                      
+                             </StackLayout> 
+                           </GridLayout> 
+                         </ng-container>
+                   </GridLayout>
+             
+             </StackLayout>
+          </ScrollView>
+       </ng-container> 
+       
+       
+       
+       <stacklayout orientation="horizontal" width="100%" height="50" verticalAlignment="top" >
+          <Label text="Hot Deals" class="ft-17 fasemibold"  width="80%" height="40" style="padding-left: 20;"></Label>    
+       </stacklayout>
+       
+       <ng-container margin="0,0,15,10">
+          <GridLayout columns="auto,auto" rows="auto" verticalAlignment="top" >
+       
+             <ng-container >
+                <GridLayout height="110" margin="0,15,0,15" width="170" row="0" col="0">
+                   <image  height="100" margin="5,15,0,15" width="160" class="cat_image3"
+                   src="res://fortune" stretch="aspectFit" ></image>
+                   </GridLayout>
+               </ng-container>
+    
+               <ng-container >
+                <GridLayout row="*,*" columns="*" row="0" col="1"  height="160" margin="0,8,0,8" width="170"
+                 class="cat_image" >
+                   <StackLayout width="140" height="150">
+                      <StackLayout row="0" col="0"   class="cat_image1"> 
+                              <Image width="135" height="70" row="0" col="0"  class="cat_image" 
+                              src="res://hot_deal_tag" stretch="aspectFit">
+                              </Image>
+                      </StackLayout>
+                       <StackLayout>
+                         <Label   text="10% off"  width="90" height="35" row="1" col="0" 
+                         class="color-black ft-25 fasbold text-center" alignContent="center"></Label>
+                         </StackLayout>
+                     </StackLayout>
+                     </GridLayout>
+                 
+               </ng-container>
+             </GridLayout>                
+          </ng-container>
+       
+       <stacklayout orientation="horizontal" width="100%" height="50" verticalAlignment="top" backgroundcolor="red">
+          <Label text="Buy Again" class="ft-17 fasemibold"  width="80%" height="40" style="padding-left: 20;"></Label>     
+          <Label  width="20%" height="30" >
+             <FormattedString>
+              <Span text="See All  " class="text-violet fasemibold ft-15"></Span>
+                 <Span text="&#xf0da;" class="ft-15 fas text-violet ml-10"></Span>
+             </FormattedString>
+         </Label>
+       </stacklayout>
+                
+       <ng-container>
+          <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false">
+             <StackLayout orientation="horizontal">
+                <GridLayout  rows="auto" columns="200,200,200,200,200,200,200,200,200,200,200," >
+    
+               <ng-container *ngFor = "let item of MixItems">
+    
+                   <GridLayout rows="*, *, *" columns="*, *" row="{{item.Row}}" col="{{item.Col}}" margin="6" class="bg-white">
+               
+                   <GridLayout height="50" width="100" row="0" col="0">
+                     <image  height="50" width="100" class="cat_image" src="res://discount" stretch="aspectFit" row="0" col="0" margin="6"></image> 
+               
+                       <StackLayout row="0" col="0" verticalAlignment="center" horizontalAlignment="left" width="90"  >
+                        <Label [text]="item.Discount+'%'" class="bold" margin="0,0,0,35" fontSize="15" color="#fff"></Label>
+                    </StackLayout>
+                     </GridLayout>
+    
+                    <GridLayout rows="*" columns="*,30,*" row="0" col="1" height="35" width="70" marginTop="10">
+                      <Label row="0" col="0" class=" text-black fas ft-10 text-center" (tap)="minusqty(item)" text="&#xf068;" verticalAlignment="center"></Label>
+                      <Label row="0" col="1"  class="text-white faregular ft-15 text-center cat_image4" [text]="item.Quantity" verticalAlignment="center" backgroundColor="#5EC401"></Label>
+                      <Label row="0" col="2" class=" text-black fas ft-10 text-center" (tap)="plusqty(item)" text="&#xf067;" verticalAlignment="center"></Label>
+                  </GridLayout>
+                      
+                    
+                   <image height="100" width="100" class="cat_image" [src]="item.ImageUrl" stretch="aspectFit" row="1" col="0" colSpan="2"></image> 
+                  
+                   <StackLayout row="2" col="0" colSpan="2" class="text-center">
+                      <Label [text]="item.Fname" textWrap="true" class="color-black" alignContent="center"></Label>
+                      <Label [text]="item.Lname" textWrap="true" class="color-black" alignContent="center"></Label>           
+                       <Label >
+                       <FormattedString>
+                         <Span [text]="'$'+item.OriginalCost   " class="text-green ft-12  famedium"></Span>
+                         <Span [text]="   '$'+item.OfferCost   " class="text-grey ft-12 strike famedium" ></Span>
+                         <Span [text]="    '+'+item.SellersCount+'sellers'  " class="text-black ft-12 famedium" ></Span>
+                       </FormattedString>
+                     </Label>
+                    <StackLayout orientation="horizontal" row="2" col="0" colSpan="2" margin="10">
+                     <Label text="Qty" class="text-grey ft-14  famedium" margin="0,50,0,0"></Label>
+                     <Label [text]="    Qty+'Kgs'   " class="text-black ft-14  famedium bg-gray"></Label>
+                     <Label text="  &#xf0d7;    " class="text-black ft-14 fas bg-gray" ></Label>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" row="2" col="0" colSpan="2" margin="0,10,10,10">
+                       <Label text="seller" class="text-grey ft-14  famedium" margin="0,50,0,0"></Label>
+                       <Label [text]="SellerName" class="text-black ft-14 bg-grey famedium"></Label>
+                      </StackLayout>
+             
+                    </StackLayout> 
+                  </GridLayout> 
+                </ng-container>
+          </GridLayout>
+    
+    </StackLayout>
+    </ScrollView>
+    </ng-container> 
+    
+    <stacklayout orientation="horizontal" width="100%" height="50" verticalAlignment="top" backgroundcolor="red">
+       <Label text="Recommanded Sellers" class="ft-17 fasemibold"  width="80%" height="40" style="padding-left: 20;"></Label>     
+       <Label  width="20%" height="30">
+          <FormattedString>
+           <Span text="See All  " class="text-violet fasemibold ft-15"></Span>
+              <Span text="&#xf0da;" class="ft-15 fas text-violet ml-10"></Span>
+          </FormattedString>
+      </Label>
+    </stacklayout>
+    <GridLayout rows="*,*" columns="*,*">
+       <StackLayout orientation="horizontal" row="0" col="0" height="50" margin="15" class="bg-white text-center cat_image">
+          <Label text="Sunita" class="text-black ft-14  famedium" margin="0,110,0,0"></Label>
+          <Label text="&#xf061;" class="text-violet ft-14 fas" ></Label>
+         </StackLayout>
+         <StackLayout orientation="horizontal" row="0" col="1" height="50" margin="10" class="bg-white text-center cat_image">
+          <Label text="KIKI Shop" class="text-black ft-14  famedium" margin="0,70,0,0"></Label>
+          <Label text="&#xf061;" class="text-violet ft-14 fas" ></Label>
+         </StackLayout>
+         <StackLayout orientation="horizontal" row="1" col="0" height="50" margin="10" class="bg-white text-center cat_image">
+          <Label text="Food Festive" class="text-black ft-14  famedium" margin="0,70,0,0"></Label>
+          <Label text="&#xf061;" class="text-violet ft-14 fas" ></Label>
+         </StackLayout>
+         <StackLayout orientation="horizontal" row="1" col="1" height="50" margin="10" class="bg-white text-center cat_image">
+          <Label text="Rancher's Grocery" class="text-black ft-14  famedium " margin="0,20,0,0"></Label>
+          <Label text="&#xf061;" class="text-violet ft-14 fas" ></Label>
+         </StackLayout>
+    
+    </GridLayout>
+            
+    </StackLayout>  
+    </GridLayout> 
+    </ScrollView>  

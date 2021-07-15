@@ -11,7 +11,10 @@ import { VenderlistComponent} from "./venderlist/venderlist.component"
 import { TermsandconditionsComponent } from "./termsandconditions/termsandconditions.component";
 import { OrderconformationComponent } from "./orderconformation/orderconformation.component";
 import { NotificationComponent } from "./notification/notification.component";
-
+import { SearchpageComponent } from "./searchpage/searchpage.component";
+import { ContactusComponent } from "./contactus/contactus.component"
+import { SelectpaymentComponent } from "./selectpayment/selectpayment.component";
+import { CashbackComponent } from "./cashback/cashback.component";
  
 @NgModule({
     imports: [
@@ -29,7 +32,12 @@ import { NotificationComponent } from "./notification/notification.component";
         VenderlistComponent,
         TermsandconditionsComponent,
         OrderconformationComponent,
-        NotificationComponent
+        NotificationComponent,
+        SearchpageComponent,
+        ContactusComponent,
+        SelectpaymentComponent,
+        CashbackComponent
+
     ],
     schemas: [NO_ERRORS_SCHEMA]
 })

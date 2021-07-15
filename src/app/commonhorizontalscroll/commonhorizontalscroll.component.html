@@ -1,24 +1,34 @@
-<!-- <GridLayout>
- <SearchBar hint="Search hint" backgroundColor="#D7B7FC" class="cat_image" width="80%" height="40" marginTop="15"
-         [text]="searchPhrase" verticalAlignment="top" 
-        (submit)="onSearchSubmit($event)">
-    </SearchBar> 
- </GridLayout>      -->
- 
+
     <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false" >  
 
        <StackLayout orientation="horizontal" padding="10 10">
-  <GridLayout  rows="150" columns="360,360,360,360,360">
+  <GridLayout  rows="160" columns="360,360,360,360,360,360">
    
-   <image src="res://vegetables" stretch="aspectFill" class="cat_image" height="150" width="345" col="0" row="0"  ></image> 
+   <image src="res://vegetables" stretch="aspectFill" class="cat_image" height="160" width="345" col="0" row="0"  ></image> 
 
-    <image src="res://fruits" stretch="aspectFill" class="cat_image" height="150" width="345" col="1" row="0" ></image> 
+    <image src="res://fruits" stretch="aspectFill" class="cat_image" height="160" width="345" col="1" row="0" ></image> 
 
-    <image src="res://leafy_veg" stretch="aspectFill" class="cat_image" height="150" width="345"  col="2" row="0" ></image> 
+    <image src="res://leafy_veg" stretch="aspectFill" class="cat_image" height="160" width="345"  col="2" row="0" ></image> 
 
-    <image src="res://chocolate" stretch="aspectFill" class="cat_image" height="150" width="345" col="3" row="0" ></image> 
-    <image src="res://sale" stretch="aspectFill" class="cat_image" height="150" width="345" col="4" row="0" ></image> 
-
+    <image src="res://chocolate" stretch="aspectFill" class="cat_image" height="160" width="345" col="3" row="0" ></image> 
+    <image src="res://sale" stretch="aspectFill" class="cat_image" height="160" width="345" col="4" row="0" ></image> 
+   
+    <GridLayout  rows="*" col="*" col="5" row="0"  >
+<image src="res://sunita" stretch="aspectFill" class="cat_image" col="0" row="0" height="150" width="345"></image> 
+<stacklayout row="0" col="0" margin="10,10,10,20">
+<label text="SUNITA" class="text-white ft-15 fasemibold"></label>
+<stacklayout orientation="horizontal">
+    <label text="&#xf3c5;" class="fas text-white ft-15 "></label>
+    <label text="Lorem ipsum is simply" class="text-white ft-15" margin="0,0,0,10"></label>
+</stacklayout>
+<label text="dummy text the printing" class="text-white ft-15"></label>
+<label text="and......" class="text-white ft-15"></label>
+<stacklayout orientation="horizontal" width="100" height="30" class="bg-white text-green cat_image ft-12 text-center left">
+<label text="&#xf879;" class="fas" margin="5"></label>
+<label text="Contact" class="fasemibold" margin="5"></label>
+</stacklayout>
+</stacklayout>
+    </GridLayout>
 </GridLayout>
 
 </StackLayout>

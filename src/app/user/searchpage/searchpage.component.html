@@ -1,0 +1,42 @@
+  <GridLayout rows="*" columns="*" height="30%" verticalAlignment="top" class="bg-gray">
+  <image src="res://logincopy" stretch="aspectFill" row="0" col="0"></image>
+
+<StackLayout  row="0" col="0" colSpan="3" margin="40,15,0,15">
+  <SearchBar hint="Search Grocery Here" backgroundColor="#B167FB" class="txtsearch" height="60" class="cat_image1"
+  [text]="searchPhrase"  
+ (submit)="onSearchSubmit($event)">
+</SearchBar>
+ </StackLayout>
+</GridLayout>
+
+
+    <GridLayout rows="60,80,80,80" columns="*" margin="20,20,200,20" height="40%" class="bg-white cat_image">
+      <label row="0" col="0" colSpan="1" text="Most Popular Searches" class="ft-15 fasemibold text-black" margin="15,20,0,20"></label>
+
+<GridLayout row="1" col="0" rows="*" columns="50,250"  margin="0,15,15,15">
+<image row="1" col="0" src="res://flour1" stretch="aspectFit"  height="50" margin="0,10,0,0"></image>
+<StackLayout row="1" col="1" height="50">
+<label  text="Fortune Shreya Gold Toor Dal" class="text-black ft-15 faregular"></label>
+<label  text="$40" class="text-grey ft-15 fasemibold"></label>
+</StackLayout>
+</GridLayout>
+<GridLayout row="2" col="0" rows="*" columns="50,250" margin="0,15,15,15">
+  <image row="1" col="0" src="res://flour" stretch="aspectFit"  height="50" margin="0,10,0,0"></image>
+  <StackLayout row="1" col="1" height="50">
+  <label  text="Fortune Matar Besan" class="text-black ft-15 faregular"></label>
+  <label  text="$40" class="text-grey ft-15 fasemibold"></label>
+  </StackLayout>
+  </GridLayout>
+  <GridLayout row="3" col="0" rows="*" columns="50,250" margin="0,15,15,15">
+    <image row="1" col="0" src="res://chana_dal" stretch="aspectFit"  height="50" margin="0,10,0,0"></image>
+    <StackLayout row="1" col="1" height="50">
+    <label  text="Double Diamond Premium Medha Flour" class="text-black ft-15 faregular"></label>
+    <label  text="$40" class="text-grey ft-15 fasemibold"></label>
+    </StackLayout>
+    </GridLayout>
+  </GridLayout>
+  
+    <image verticalAlignment="bottom" horizontalAlignment="center" src="res://vectorsmart" stretch="aspectfit" margin="10,0,100,0"></image>
+
+
+ 

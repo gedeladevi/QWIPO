@@ -7,12 +7,12 @@ import { BeautyAndHygine } from '../Models/BeautyAndHygine';
 import { Component, OnInit } from "@angular/core";
 import { Page } from "@nativescript/core/ui/page";
 @Component({
-    selector: "seeallitems1",
+    selector: "productlistV1",
     moduleId: module.id,
-    templateUrl: "./seeallitems1.component.html",
-    styleUrls: ['./seeallitems1.component.css']   
+    templateUrl: "./productlistV1.component.html",
+    styleUrls: ['./productlistV1.component.css']   
 })
-export class Seeallitems1Component implements OnInit {
+export class productlistV1Component implements OnInit {
     dialogOpen = false;
     searchPhrase: string;
     qty: number = 0;
